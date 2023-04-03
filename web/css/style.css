@@ -1,0 +1,136 @@
+:root {
+    --foregroundColour: #d0d0d0;
+    --backgroundColour: #303030;
+    --overlayColour: #eb1b1b;
+
+    background-color: var(--backgroundColour);
+    color: var(--foregroundColour);
+    font-family: 'Rubik';
+}
+
+html body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+#titleBar {
+    height: 2vh;
+}
+
+#titleBar a, #titleBar img {
+    position: absolute;
+    top: 1vh;
+}
+
+#titleBar img {
+    left: 1vw;
+    height: 5vh;
+}
+
+#name {
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#imageContainer {
+    width: 100%;
+    height: 60vh;
+    margin: 2% 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+#imageContainer img {
+    border-radius: 20px;
+    margin-inline: 5vw;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+#textBoxContainer {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#textBoxContainer input {
+    height: 5vh;
+    border-style: dashed;
+    border-radius: 10px;
+    caret-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    font-size: 5vh;
+    color: var(--foregroundColour);
+    background-color: var(--backgroundColour);
+    border-color: var(--foregroundColour);
+}
+
+*:focus {
+    outline: #d0d0d0 solid 4px;
+}
+
+#keyboardContainer {
+    width: 90%;
+    height: 20vh;
+    margin-inline: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    column-gap: 4%;
+}
+
+#keyboardContainer div {
+    padding: 3px 0 2px;
+    width: 12%;
+    border-radius: 10px;
+    font-size: 5vh;
+    text-align: center;
+    justify-content: center;
+    color: var(--backgroundColour);
+    background-color: var(--foregroundColour);
+}
+
+#overlay {
+    z-index: 999;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000040;
+    backdrop-filter: blur(10px);
+}
+
+#overlayContent {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    top: 25vh;
+    padding-block: 50px;
+    text-align: center;
+    background-color: var(--overlayColour);
+}
+
+.visible {
+    visibility: visible;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+@font-face {
+    font-family: Rubik;
+    src: url(/fonts/RubikMonoOne-Regular.ttf);
+}
