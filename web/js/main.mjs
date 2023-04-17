@@ -38,10 +38,6 @@ const levels = [
     'test'
 ];
 
-//USE EMULATOR
-connectFunctionsEmulator(functions, "localhost", 5003);
-connectAuthEmulator(auth, "http://localhost:9099");
-
 signInAnonymously(auth)
 .then(() => {
     drawMenu();
