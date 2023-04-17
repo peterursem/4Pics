@@ -12,7 +12,8 @@ html body {
     background-image: url('/imgs/bg.png');
     background-size: cover; 
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
     margin: 0;
     -webkit-overflow-scrolling : hidden !important;
     overflow: hidden !important;

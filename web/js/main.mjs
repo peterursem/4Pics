@@ -45,11 +45,6 @@ signInAnonymously(auth)
     console.error(err.code,':',err.message);
 });
 
-document.body.height = window.innerHeight;
-window.onresize = function() {
-    document.body.height = window.innerHeight;
-}
-
 function start(difficulty) {
     auth.currentUser.getIdToken()
     .then((token) => {
