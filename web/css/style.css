@@ -31,6 +31,7 @@ button{
 
 #titleBar {
     height: 7%;
+    background-color: #ffffff10;
 }
 
 #titleBar a, #titleBar img {

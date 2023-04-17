@@ -101,6 +101,7 @@ function getHint(){
         hint({'id': questionNumber, 'letters': letters, 'difficulty': gameDifficulty, 'token': token})
         .then(res => {
             score.innerText = 'Score: \n' + res.data.score;
+            document.querySelector('#letter'+res.data.letter+'.visible');
             hideLetter(res.data.letter);
         });
     });
