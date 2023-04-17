@@ -30,6 +30,8 @@ export function init(difficulty, functions, authToken) {
     textBoxContainer.style.display = 'flex';
     keyboardContainer.style.display = 'flex';
 
+    score.innerText = 'Score: \n' + 100;
+
     const hintButton = document.getElementById('hint');
     hintButton.onclick = getHint;
     hintButton.style.display = 'block';
@@ -73,7 +75,6 @@ function clearQuestion() {
 }
 
 function loadNewQuestion(question) { 
-    score.innerText = 'Score: \n' + 100;
     questionNumber = question.id;       
     makeTextBoxes(question.length);
     makeKeyboard(question.letters);

@@ -142,7 +142,7 @@ button{
 }
 
 *:focus {
-    outline: var(--overlayColour) solid 4px;
+    box-shadow: 0 0 0 8px var(--overlayColour);
 }
 
 #keyboardContainer {
