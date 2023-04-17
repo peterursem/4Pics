@@ -19,6 +19,7 @@ html body {
 
 .frosted{
     background-color: #ffffff40;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
 }
 
@@ -115,7 +116,7 @@ html body {
 }
 
 #textBoxContainer {
-    width: 100%;
+    width: 100vw;
     height: 10vh;
     display: flex;
     flex-wrap: nowrap;
@@ -123,12 +124,14 @@ html body {
 }
 
 #textBoxContainer input {
+    min-width: 0;
     height: 5vh;
     border: var(--foregroundColour) solid;
     border-radius: 10px;
     caret-color: transparent;
     text-align: center;
     text-transform: uppercase;
+    font: 'Rubik';
     font-weight: bold;
     font-size: 5vh;
     color: var(--foregroundColour);

@@ -9,6 +9,7 @@ export function makeTextBoxes(count) {
         let input = document.createElement('input');
         input.type = 'text';
         input.maxLength = '1';
+        input.inputMode = 'none';
         input.classList.add('regColor')
         input.style.width = 80 / count + 'vw';
         textBoxContainer.appendChild(input);
