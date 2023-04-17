@@ -18,6 +18,10 @@ html body {
     overflow: hidden !important;
 }
 
+button{
+    font: 'Rubik' !important;
+}
+
 .frosted{
     background-color: #ffffff40;
     -webkit-backdrop-filter: blur(40px);
@@ -132,6 +136,7 @@ html body {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 5vh;
+    font: 'Rubik' !important;
     color: var(--foregroundColour);
     background-color: var(--backgroundColour);
 }
