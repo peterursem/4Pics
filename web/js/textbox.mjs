@@ -1,5 +1,6 @@
 import { checkAnswer } from "./game.mjs";
 import { hideLetter, showLetter, letters } from "./keyboard.mjs";
+import { Overlay } from "./overlay.mjs";
 
 const textBoxContainer = document.getElementById('textBoxContainer');
 
@@ -70,10 +71,15 @@ function hasLastNeighbour(target){
 textBoxContainer.addEventListener('keydown', evt => {
     if(evt.key.length == 1) {
         if(evt.target.value != '') {
+            console.log('Removing', evt.target.value);
             showLetter(evt.target.value);
             evt.target.value = '';
         }
         return;
+    }
+
+    if(evt.key == 'Enter') {
+        Overlay.clearAll();
     }
 
     if(evt.key == 'Backspace' || evt.key == 'ArrowLeft') {

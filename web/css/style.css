@@ -59,6 +59,7 @@ button{
     background-color: var(--backgroundColour);
     border-color: var(--foregroundColour);
     color: var(--foregroundColour);
+    font: 'Rubik';
 
     border-style: solid;
     border-radius: 10px;
@@ -129,6 +130,7 @@ button{
 #textBoxContainer input {
     min-width: 0;
     height: 5vh;
+    padding: 0;
     border: var(--foregroundColour) solid;
     border-radius: 10px;
     caret-color: transparent;

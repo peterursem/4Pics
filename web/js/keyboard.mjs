@@ -61,5 +61,4 @@ function buttonPressed(target) {
     currentFocus.value = target.innerText;
     currentFocus.dispatchEvent(new KeyboardEvent('keydown',{'key': target.innerText, 'bubbles': true}));
     currentFocus.dispatchEvent(new KeyboardEvent('keyup',{'key': target.innerText, 'bubbles': true}));
-
 }
