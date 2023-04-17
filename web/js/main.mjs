@@ -34,8 +34,7 @@ export const auth = getAuth(app);
 
 const levels = [
     'easy',
-    'hard',
-    'test'
+    'hard'
 ];
 
 signInAnonymously(auth)
