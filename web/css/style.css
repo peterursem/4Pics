@@ -12,15 +12,15 @@ html body {
     background-image: url('/imgs/bg.png');
     background-size: cover; 
     width: 100vw;
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+    height: 100vh;
+    max-height: -webkit-fill-available;
     margin: 0;
     -webkit-overflow-scrolling : hidden !important;
     overflow: hidden !important;
 }
 
 button{
-    font: 'Rubik' !important;
+    font-family: 'Rubik' !important;
 }
 
 .frosted{
@@ -60,7 +60,7 @@ button{
     background-color: var(--backgroundColour);
     border-color: var(--foregroundColour);
     color: var(--foregroundColour);
-    font: 'Rubik';
+    font-family: 'Rubik' !important;
 
     border-style: solid;
     border-radius: 10px;
@@ -139,7 +139,7 @@ button{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 5vh;
-    font: 'Rubik' !important;
+    font-family: 'Rubik' !important;
     color: var(--foregroundColour);
     background-color: var(--backgroundColour);
 }
