@@ -23,6 +23,11 @@ button{
     font-family: 'Rubik' !important;
 }
 
+input:focus,
+button:focus {
+    outline: none;
+}
+
 .frosted{
     background-color: #ffffff40;
     -webkit-backdrop-filter: blur(40px);

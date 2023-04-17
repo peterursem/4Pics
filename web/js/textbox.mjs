@@ -11,6 +11,7 @@ export function makeTextBoxes(count) {
         input.type = 'text';
         input.maxLength = '1';
         input.inputMode = 'none';
+        input.readOnly = true;
         input.classList.add('regColor')
         input.style.width = 80 / count + 'vw';
         textBoxContainer.appendChild(input);
@@ -69,13 +70,7 @@ function hasLastNeighbour(target){
 }
 
 textBoxContainer.addEventListener('keydown', evt => {
-    if(evt.key.length == 1) {
-        if(evt.target.value != '') {
-            showLetter(evt.target.value);
-            evt.target.value = '';
-        }
-        return;
-    }
+    console.log('Keydown in textbox:', evt.target.value,'key',evt.key);
 
     if(evt.key == 'Enter') {
         Overlay.clearAll();
@@ -83,14 +78,22 @@ textBoxContainer.addEventListener('keydown', evt => {
 
     if(evt.key == 'Backspace' || evt.key == 'ArrowLeft') {
         if (evt.target.value != '') {
-            evt.target.value = '';
             showLetter(evt.target.value);
+            evt.target.value = '';
             return;
         }
         if (hasLastNeighbour(evt.target)) {
             showLetter(evt.target.previousElementSibling.value);
             evt.target.previousElementSibling.value = '';
             setFocus(evt.target.previousElementSibling);
+        }
+        return;
+    }
+
+    if(evt.key.length == 1) {
+        if(evt.target.value != '') {
+            showLetter(evt.target.value);
+            evt.target.value = evt.key;
         }
         return;
     }

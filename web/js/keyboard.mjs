@@ -48,7 +48,7 @@ export function showLetter(letter) {
         return;
     }
 
-    if (letterButton.classList.indexOf('hinted')) {
+    if (letterButton.classList.contains('hinted')) {
         console.log('Letter was hidden as part of a hint')
     }
 
@@ -63,7 +63,6 @@ export function resetKeyboard() {
 
 function buttonPressed(target) {
     target.classList.add('clicked');
-    currentFocus.value = target.innerText;
     currentFocus.dispatchEvent(new KeyboardEvent('keydown',{'key': target.innerText, 'bubbles': true}));
     currentFocus.dispatchEvent(new KeyboardEvent('keyup',{'key': target.innerText, 'bubbles': true}));
 }
