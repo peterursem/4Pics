@@ -1,5 +1,4 @@
 let overlayCanvas = document.getElementById('overlay');
-
 export class Overlay {
     constructor(titleText, contentText, options){
         this.elem = document.createElement('div');
@@ -37,4 +36,3 @@ export class Overlay {
         }
     }
 }
-

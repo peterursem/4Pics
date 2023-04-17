@@ -1,7 +1,7 @@
 :root {
     --foregroundColour: #d0d0d0;
     --backgroundColour: #303030;
-    --overlayColour: #eb1b1b;
+    --overlayColour: #d84040;
 
     background-color: var(--backgroundColour);
     color: var(--foregroundColour);
@@ -9,17 +9,25 @@
 }
 
 html body {
+    background-image: url('/imgs/bg.png');
+    background-size: cover; 
     width: 100vw;
     height: 100vh;
     margin: 0;
     overflow: hidden;
 }
 
+.frosted{
+    background-color: #ffffff40;
+    backdrop-filter: blur(40px);
+}
+
 #titleBar {
-    height: 2vh;
+    height: 7vh;
 }
 
 #titleBar a, #titleBar img {
+    color: var(--overlayColour);
     position: absolute;
     top: 1vh;
 }
@@ -27,6 +35,58 @@ html body {
 #titleBar img {
     left: 1vw;
     height: 5vh;
+}
+
+#titleBar #score {
+    font-size: 1.5vh;
+    right: 20vw;
+    top: 1.75vh;
+    text-align: center;
+}
+
+#hint {
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+    padding: 1.5vh;
+
+    background-color: var(--backgroundColour);
+    border-color: var(--foregroundColour);
+    color: var(--foregroundColour);
+
+    border-style: solid;
+    border-radius: 10px;
+
+    font-family: 'Rubik';
+    font-size: 1.5vh;
+}
+
+#menu {
+    color: var(--foregroundColour);
+    background-color: var(--backgroundColour);
+    max-width: 40vh;
+    height: auto;
+    margin: 20vh auto;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+#menu p {
+    font-family: 'Merriweather';
+}
+
+#levelSelect {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#levelSelect button{
+    font-family: 'Rubik';
+    overflow: hidden;
+    margin: 20px 0 0 0;
+    padding: 15px;
 }
 
 #name {
@@ -37,9 +97,9 @@ html body {
 }
 
 #imageContainer {
-    width: 100%;
+    max-width: 56.25vh;
     height: 60vh;
-    margin: 2% 0 2%;
+    margin: 1% auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -47,8 +107,9 @@ html body {
 }
 
 #imageContainer img {
+    outline: var(--overlayColour) solid 8px;
     border-radius: 20px;
-    margin-inline: 5vw;
+    margin-inline: 5%;
     max-width: 40%;
     max-height: 40%;
 }
@@ -63,29 +124,30 @@ html body {
 
 #textBoxContainer input {
     height: 5vh;
-    border-style: dashed;
+    border: var(--foregroundColour) solid;
     border-radius: 10px;
     caret-color: transparent;
     text-align: center;
+    text-transform: uppercase;
     font-weight: bold;
     font-size: 5vh;
     color: var(--foregroundColour);
     background-color: var(--backgroundColour);
-    border-color: var(--foregroundColour);
 }
 
 *:focus {
-    outline: #d0d0d0 solid 4px;
+    outline: var(--overlayColour) solid 4px;
 }
 
 #keyboardContainer {
-    width: 90%;
+    width: 95%;
+    border-radius: 25px;
     height: 20vh;
-    margin-inline: 5%;
+    margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: space-around;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     column-gap: 4%;
 }
 
@@ -101,6 +163,7 @@ html body {
 }
 
 #overlay {
+    font-family: 'Merriweather';
     z-index: 999;
     position: absolute;
     left: 0;
@@ -133,4 +196,9 @@ html body {
 @font-face {
     font-family: Rubik;
     src: url(/fonts/RubikMonoOne-Regular.ttf);
+}
+
+@font-face{
+    font-family: Merriweather;
+    src: url(/fonts/Merriweather.ttf);
 }

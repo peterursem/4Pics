@@ -9,15 +9,18 @@
   <body>
     <div id="overlay" class="hidden"></div>
 
-    <div id="titleBar">
-      <img src="/imgs/logo.png">
+    <div id="titleBar" class="frosted">
+      <img id="logo" src="/imgs/logo.png">
       <a id="name">Common <br> Denominator</a>
+      <a id="score"></a>
+      <button id="hint" class="regColor" style="display: none;">Hint</button>
     </div>
 
-    <div id="imageContainer"></div>
-    <div id="textBoxContainer"></div>
-    <div id="keyboardContainer"></div>
+    
+    <div id="imageContainer" style="display: none;"></div>
+    <div id="textBoxContainer" style="display: none;"></div>
+    <div id="keyboardContainer" class="frosted" style="display: none;"></div>
 
-    <script type="module" src="js/game.mjs"></script>
+    <script type="module" src="js/main.mjs"></script>
   </body>
 </html>
