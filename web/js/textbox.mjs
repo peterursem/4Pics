@@ -71,7 +71,6 @@ function hasLastNeighbour(target){
 textBoxContainer.addEventListener('keydown', evt => {
     if(evt.key.length == 1) {
         if(evt.target.value != '') {
-            console.log('Removing', evt.target.value);
             showLetter(evt.target.value);
             evt.target.value = '';
         }
