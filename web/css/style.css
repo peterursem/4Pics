@@ -29,7 +29,7 @@ button{
 }
 
 #titleBar {
-    height: 7vh;
+    height: 7%;
 }
 
 #titleBar a, #titleBar img {
@@ -103,7 +103,7 @@ button{
 
 #imageContainer {
     max-width: 56.25vh;
-    height: 60vh;
+    height: 60%;
     margin: 1% auto;
     display: flex;
     flex-wrap: wrap;
@@ -121,7 +121,7 @@ button{
 
 #textBoxContainer {
     width: 100vw;
-    height: 10vh;
+    height: 10%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
@@ -150,7 +150,7 @@ button{
 #keyboardContainer {
     width: 95%;
     border-radius: 25px;
-    height: 20vh;
+    height: 20%;
     margin-inline: auto;
     display: flex;
     flex-wrap: wrap;
