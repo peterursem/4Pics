@@ -5,7 +5,7 @@
 
     background-color: var(--backgroundColour);
     color: var(--foregroundColour);
-    font-family: 'Rubik';
+    font-family: 'Rubik' !important;
 }
 
 html body {
@@ -14,7 +14,8 @@ html body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    overflow: hidden;
+    -webkit-overflow-scrolling : hidden !important;
+    overflow: hidden !important;
 }
 
 .frosted{
@@ -58,7 +59,6 @@ html body {
     border-style: solid;
     border-radius: 10px;
 
-    font-family: 'Rubik';
     font-size: 1.5vh;
 }
 
@@ -73,7 +73,7 @@ html body {
 }
 
 #menu p {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather' !important;
 }
 
 #levelSelect {
@@ -84,7 +84,6 @@ html body {
 }
 
 #levelSelect button{
-    font-family: 'Rubik';
     overflow: hidden;
     margin: 20px 0 0 0;
     padding: 15px;
@@ -108,7 +107,7 @@ html body {
 }
 
 #imageContainer img {
-    outline: var(--overlayColour) solid 8px;
+    box-shadow: 0 0 0 8px var(--overlayColour);
     border-radius: 20px;
     margin-inline: 5%;
     max-width: 40%;
@@ -131,7 +130,6 @@ html body {
     caret-color: transparent;
     text-align: center;
     text-transform: uppercase;
-    font: 'Rubik';
     font-weight: bold;
     font-size: 5vh;
     color: var(--foregroundColour);
@@ -166,7 +164,7 @@ html body {
 }
 
 #overlay {
-    font-family: 'Merriweather';
+    font-family: 'Merriweather' !important;
     z-index: 999;
     position: absolute;
     left: 0;
